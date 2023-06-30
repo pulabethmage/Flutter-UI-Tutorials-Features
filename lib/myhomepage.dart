@@ -11,10 +11,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Desgin 02 App"),
+        title: const Text("Personal Profile"),
       ),
       body: Container(
-        color: Colors.cyan,
+        color: Colors.indigo.shade200,
         padding: const EdgeInsets.all(5.0),
         child: Column(
           children: [
@@ -25,10 +25,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   MySquareShadow(
                     backColor: Colors.amber,
                     imageIcon: Icons.person_2_rounded,
+                    iconText: "Profile",
                   ),
                   MySquareShadow(
                     backColor: Color.fromARGB(255, 20, 20, 219),
                     imageIcon: Icons.add,
+                    iconText: "Add New",
                   ),
                 ],
               ),
@@ -40,10 +42,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   MySquareShadow(
                     backColor: Colors.pink,
                     imageIcon: Icons.ac_unit,
+                    iconText: "Put Ac",
                   ),
                   MySquareShadow(
                     backColor: Colors.green,
                     imageIcon: Icons.access_alarm,
+                    iconText: "Set Alarm",
                   ),
                 ],
               ),
