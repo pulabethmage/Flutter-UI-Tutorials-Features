@@ -1,4 +1,6 @@
+import 'package:designproject02/new_features.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SliverAppBarExample extends StatelessWidget {
   const SliverAppBarExample({super.key});
@@ -11,13 +13,49 @@ class SliverAppBarExample extends StatelessWidget {
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.deepPurple,
-            //leading: Icon(Icons.arrow_back),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () => Get.back(),
+            ),
+            actions: [
+              PopupMenuButton(
+                  icon: Icon(Icons.settings),
+                  // add icon, by default "3 dot" icon
+                  // icon: Icon(Icons.book)
+                  itemBuilder: (context) {
+                    return [
+                      const PopupMenuItem<int>(
+                        value: 0,
+                        child: Text("My Account"),
+                      ),
+                      const PopupMenuItem<int>(
+                        value: 1,
+                        child: Text("Settings"),
+                      ),
+                      const PopupMenuItem<int>(
+                        value: 2,
+                        child: Text("Logout"),
+                      ),
+                    ];
+                  },
+                  onSelected: (value) {
+                    if (value == 0) {
+                      print("My account menu is selected.");
+                    } else if (value == 1) {
+                      print("Settings menu is selected.");
+                    } else if (value == 2) {
+                      print("Logout menu is selected.");
+                    }
+                  }),
+            ],
+
             //title: Text("S L I V E R  A P P  B A R"),
-            expandedHeight: 300,
+            expandedHeight: 200,
             //stops app bar title going hidden / true is the defalt value
             floating: false,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
+              centerTitle: true,
               background: Container(
                 color: Colors.pink,
               ),
