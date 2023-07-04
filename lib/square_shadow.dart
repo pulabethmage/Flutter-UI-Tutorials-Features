@@ -1,5 +1,7 @@
+import 'package:designproject02/new_features.dart';
 import 'package:designproject02/profile_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MySquareShadow extends StatelessWidget {
   final Color backColor;
@@ -34,10 +36,17 @@ class MySquareShadow extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             if (iconText == "Profile") {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ProfilePage()),
-              );
+              Get.to(() => ProfilePage());
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const ProfilePage()),
+              // );
+            } else if (iconText == "New Features") {
+              Get.to(() => NewFeatures());
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => const ProfilePage()),
+              // );
             }
           },
           child: Container(
