@@ -11,6 +11,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: const Text("Personal Profile"),
       ),
       body: Container(
@@ -30,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   MySquareShadow(
                     backColor: Color.fromARGB(255, 20, 20, 219),
                     imageIcon: Icons.add,
-                    iconText: "Add New",
+                    iconText: "New Features",
                   ),
                 ],
               ),
