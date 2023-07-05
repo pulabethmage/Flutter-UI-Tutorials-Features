@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: const Text("Personal Profile"),
+        title: const Text("Dashboard Looks"),
       ),
       body: Container(
         color: Colors.indigo.shade200,
