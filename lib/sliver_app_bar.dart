@@ -19,22 +19,32 @@ class SliverAppBarExample extends StatelessWidget {
             ),
             actions: [
               PopupMenuButton(
-                  icon: Icon(Icons.settings),
+                  color: Colors.deepPurple[400],
+                  icon: Icon(Icons.settings, color: Colors.white),
                   // add icon, by default "3 dot" icon
                   // icon: Icon(Icons.book)
                   itemBuilder: (context) {
                     return [
                       const PopupMenuItem<int>(
                         value: 0,
-                        child: Text("My Account"),
+                        child: Text(
+                          "My Account",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                       const PopupMenuItem<int>(
                         value: 1,
-                        child: Text("Settings"),
+                        child: Text(
+                          "Settings",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                       const PopupMenuItem<int>(
                         value: 2,
-                        child: Text("Logout"),
+                        child: Text(
+                          "Logout",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ];
                   },
