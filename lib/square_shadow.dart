@@ -21,8 +21,8 @@ class MySquareShadow extends StatelessWidget {
           boxShadow: const [
             BoxShadow(
                 color: Colors.black54,
-                offset: Offset(4.0, 4.0),
-                blurRadius: 8.0,
+                offset: Offset(3.0, 3.0),
+                blurRadius: 5.0,
                 spreadRadius: 1.0),
           ],
           color: backColor,
@@ -36,13 +36,13 @@ class MySquareShadow extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             if (iconText == "Profile") {
-              Get.to(() => ProfilePage());
+              Get.to(() => const ProfilePage());
               // Navigator.push(
               //   context,
               //   MaterialPageRoute(builder: (context) => const ProfilePage()),
               // );
-            } else if (iconText == "New Features") {
-              Get.to(() => NewFeatures());
+            } else if (iconText == "New\nFeatures") {
+              Get.to(() => const NewFeatures());
               // Navigator.push(
               //   context,
               //   MaterialPageRoute(builder: (context) => const ProfilePage()),
@@ -57,11 +57,11 @@ class MySquareShadow extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                     color: Colors.black54,
-                    offset: Offset(4.0, 4.0),
+                    offset: Offset(2.0, 2.0),
                     blurRadius: 8.0,
                     spreadRadius: 1.0),
               ],
-              color: Colors.black,
+              color: Colors.deepPurple,
               shape: BoxShape.circle,
             ),
             child: Column(
@@ -72,11 +72,16 @@ class MySquareShadow extends StatelessWidget {
                   color: Colors.white,
                   size: 55.0,
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: 5.0),
-                  child: Text(
-                    iconText,
-                    style: TextStyle(color: Colors.white),
+                const SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  iconText,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ],

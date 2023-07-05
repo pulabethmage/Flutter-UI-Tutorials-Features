@@ -1,6 +1,7 @@
 import 'package:designproject02/clip_r_rect.dart';
 import 'package:designproject02/grid_view_feature.dart';
 import 'package:designproject02/nav_drawer_feature.dart';
+import 'package:designproject02/tab_bar_feature.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:designproject02/sliver_app_bar.dart';
@@ -29,13 +30,16 @@ class NewFeatures extends StatelessWidget {
                     onTap: () {
                       Get.to(() => const SliverAppBarExample());
                     },
-                    child: Container(
-                      width: double.maxFinite,
-                      padding: const EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade300,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Container(
+                        width: double.maxFinite,
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple.shade300,
+                        ),
+                        child: const Text("S L I V E R  A P P  B A R"),
                       ),
-                      child: const Text("S L I V E R  A P P  B A R"),
                     ),
                   ),
                 ),
@@ -47,13 +51,16 @@ class NewFeatures extends StatelessWidget {
                         () => const ClipRRectFeature(),
                       ),
                     },
-                    child: Container(
-                      width: double.maxFinite,
-                      padding: const EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade300,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Container(
+                        width: double.maxFinite,
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple.shade300,
+                        ),
+                        child: const Text("C L I P R R E C T"),
                       ),
-                      child: const Text("C L I P R R E C T"),
                     ),
                   ),
                 ),
@@ -65,13 +72,16 @@ class NewFeatures extends StatelessWidget {
                         () => const GridViewFeature(),
                       ),
                     },
-                    child: Container(
-                      width: double.maxFinite,
-                      padding: const EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade300,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Container(
+                        width: double.maxFinite,
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple.shade300,
+                        ),
+                        child: const Text("G R I D V I E W"),
                       ),
-                      child: const Text("G R I D V I E W"),
                     ),
                   ),
                 ),
@@ -83,13 +93,37 @@ class NewFeatures extends StatelessWidget {
                         () => const NavDrawerWidget(),
                       ),
                     },
-                    child: Container(
-                      width: double.maxFinite,
-                      padding: const EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurple.shade300,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Container(
+                        width: double.maxFinite,
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple.shade300,
+                        ),
+                        child: const Text("N A V D R A W E R"),
                       ),
-                      child: const Text("N A V D R A W E R"),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: GestureDetector(
+                    onTap: () => {
+                      Get.to(
+                        () => const TabBarFeature(),
+                      ),
+                    },
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      child: Container(
+                        width: double.maxFinite,
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: Colors.deepPurple.shade300,
+                        ),
+                        child: const Text("T A B B A R"),
+                      ),
                     ),
                   ),
                 ),

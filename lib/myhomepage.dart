@@ -12,10 +12,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: const Text("Dashboard Looks"),
+        title: Center(child: const Text("D A S H B O A R D")),
       ),
       body: Container(
-        color: Colors.indigo.shade200,
+        color: Colors.deepPurple,
         padding: const EdgeInsets.all(5.0),
         child: Column(
           children: [
@@ -24,14 +24,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   MySquareShadow(
-                    backColor: Colors.amber,
+                    backColor: Colors.deepPurple.shade300,
                     imageIcon: Icons.person_2_rounded,
                     iconText: "Profile",
                   ),
                   MySquareShadow(
-                    backColor: Color.fromARGB(255, 20, 20, 219),
+                    backColor: Colors.deepPurple.shade300,
                     imageIcon: Icons.add,
-                    iconText: "New Features",
+                    iconText: "New\nFeatures",
                   ),
                 ],
               ),
@@ -41,14 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   MySquareShadow(
-                    backColor: Colors.pink,
+                    backColor: Colors.deepPurple.shade300,
                     imageIcon: Icons.ac_unit,
-                    iconText: "Put Ac",
+                    iconText: "Put\nAc",
                   ),
                   MySquareShadow(
-                    backColor: Colors.green,
+                    backColor: Colors.deepPurple.shade300,
                     imageIcon: Icons.access_alarm,
-                    iconText: "Set Alarm",
+                    iconText: "Set\nAlarm",
                   ),
                 ],
               ),

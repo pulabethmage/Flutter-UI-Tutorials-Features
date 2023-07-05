@@ -13,10 +13,24 @@ class MyStoryView extends StatelessWidget {
         width: 100,
         height: 100,
         decoration: BoxDecoration(
-          color: Colors.red,
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black54,
+                offset: Offset(3.0, 3.0),
+                blurRadius: 5.0,
+                spreadRadius: 1.0),
+          ],
+          color: Colors.deepPurple[500],
           shape: BoxShape.circle,
         ),
-        child: Center(child: Text(childText)),
+        child: Center(
+            child: Text(
+          childText,
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+        )),
       ),
     );
   }

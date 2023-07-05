@@ -46,7 +46,7 @@ class _ProfilePageState extends State<ProfilePage> {
         title: Text("Profile Page"),
       ),
       body: Container(
-        color: Colors.amber,
+        color: Colors.deepPurple[100],
         width: double.infinity,
         child: Column(
           children: [
@@ -59,7 +59,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Container(
                       padding: EdgeInsets.all(20),
                       height: double.infinity,
-                      color: Colors.pink,
+                      color: Colors.deepPurple[300],
                       child: Text("Colum 01"),
                     ),
                   ),
@@ -67,7 +67,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     child: Container(
                       padding: EdgeInsets.all(20),
                       height: double.infinity,
-                      color: Colors.green,
+                      color: Colors.deepPurple[400],
                       child: Text("Colum 02"),
                     ),
                   )
