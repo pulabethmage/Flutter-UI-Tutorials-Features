@@ -43,7 +43,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text("My Profile"),
+        title: Text("Profile Page"),
       ),
       body: Container(
         color: Colors.amber,
